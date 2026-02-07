@@ -2,15 +2,16 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+// 1. Load the Inter font
 const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter", // Defines the CSS variable
   display: "swap",
-  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
   title: "RecruiterAI - Every Hire, Faster and Better",
-  description: "Stop losing great candidates to slow, manual hiring processes. Let AI handle the heavy lifting while you focus on building your team.",
+  description: "Automate your hiring workflow with AI.",
 };
 
 export default function RootLayout({
@@ -19,8 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased`}>
+    <html lang="en" className={inter.variable}> 
+      {/* 2. Apply the variable to HTML and force font-sans on Body */}
+      <body className="font-sans antialiased bg-black text-white">
         {children}
       </body>
     </html>

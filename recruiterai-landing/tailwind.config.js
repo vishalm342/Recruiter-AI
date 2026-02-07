@@ -1,32 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: '#3B82F6',
-          bg: '#EFF6FF',
-        },
-        accent: {
-          1: '#A5D8FF',
-          2: '#D0BCFF',
-          3: '#B197FC',
-        },
-        dark: {
-          primary: '#3B82F6',
-          bg: '#000000',
-          text: '#737373',
-        },
+        // EXACT Hex Codes from PDF Page 2
+        background: "#000000",      // "Primary BG" (Dark)
+        card: "#404040",            // "Secondary BG" (Dark)
+        primary: "#3B82F6",         // "Primary"
+        muted: "#737373",           // "Secondary" (Text)
+        
+        // Accents
+        accent1: "#A5D8FF",         // "Accent #1" (Blue)
+        accent2: "#D0BCFF",         // "Accent #2" (Purple)
+        accent3: "#B197FC",         // "Accent #3" (Deep Purple)
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'sans-serif'],
       },
     },
   },
   plugins: [],
-}
-
+};
