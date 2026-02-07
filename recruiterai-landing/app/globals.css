@@ -1,6 +1,8 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
+:root {
   /* Primary colors */
   --color-primary: #3B82F6;
   --color-primary-bg: #EFF6FF;
@@ -13,7 +15,6 @@
   /* Dark theme colors */
   --color-dark-primary: #3B82F6;
   --color-dark-bg: #000000;
-  --color-dark-card: #404040;
   --color-dark-text: #737373;
   
   /* Font family */
