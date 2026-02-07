@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-3 right-0 z-[1000] bg-black border-b border-gray-900 transition-shadow duration-300 ${isScrolled ? "shadow-lg shadow-black/50" : ""
+      className={`fixed top-0 left-0 right-0 z-[1000] bg-black border-b border-gray-900 transition-shadow duration-300 ${isScrolled ? "shadow-lg shadow-black/50" : ""
         }`}
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -42,7 +42,7 @@ export default function Navbar() {
             <button className="text-sm text-gray-400 hover:text-white transition-colors hidden sm:block">
               Log In
             </button>
-            <button className="bg-[#3B82F6] text-white text-sm font-medium px-6 py-6 rounded-lg hover:bg-[#5B9EF8] transition-colors">
+            <button className="bg-[#3B82F6] text-white text-sm font-medium px-8 py-2 rounded-md hover:bg-[#5B9EF8] transition-colors">
               Get Started
             </button>
           </div>
