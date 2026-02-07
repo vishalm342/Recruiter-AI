@@ -25,7 +25,7 @@ const Node = ({
 
   return (
     <div className={twMerge(
-      "relative z-10 w-full rounded-lg px-2 py-3 text-center text-xs md:text-sm transition-transform hover:scale-[1.01] flex items-center justify-center min-h-[40px]",
+      "relative z-10 w-full rounded-lg px-2 py-3 text-center text-xs md:text-sm transition-transform hover:scale-[1.01] flex flex-col items-center justify-center min-h-[48px]", 
       styles[variant as keyof typeof styles],
       className
     )}>
@@ -34,14 +34,14 @@ const Node = ({
   );
 };
 
-const Connector = ({ height = "h-6" }: { height?: string }) => (
+const Connector = ({ height = "h-8" }: { height?: string }) => (
   <div className={clsx("w-[2px] bg-[#333] mx-auto", height)} />
 );
 
 const Diamond = ({ label }: { label: React.ReactNode }) => (
-  <div className="relative flex justify-center py-2 my-1">
-    <div className="relative z-10 flex h-16 w-16 items-center justify-center bg-[#111] border border-[#444] rotate-45 transform shadow-lg">
-      <div className="-rotate-45 transform text-center text-[9px] font-bold leading-tight text-white uppercase select-none">
+  <div className="relative flex justify-center py-2 my-2">
+    <div className="relative z-10 flex h-20 w-20 items-center justify-center bg-[#111] border border-[#444] rotate-45 transform shadow-lg">
+      <div className="-rotate-45 transform text-center text-[10px] font-bold leading-tight text-white uppercase select-none">
         {label}
       </div>
     </div>
@@ -52,12 +52,12 @@ const Diamond = ({ label }: { label: React.ReactNode }) => (
 );
 
 const Branch = ({ leftLabel, rightLabel, leftContent, rightContent }: any) => (
-  <div className="relative w-full flex justify-center">
+  <div className="relative w-full flex justify-center my-2">
     <div className="flex w-full">
       {/* Left Column (50%) */}
       <div className="w-1/2 flex flex-col items-center relative">
          <div className="absolute top-0 right-0 w-1/2 h-[2px] bg-[#333]" />
-         <div className="h-6 w-[2px] bg-[#333]" />
+         <div className="h-8 w-[2px] bg-[#333]" />
          <span className="mb-2 text-[9px] font-bold text-emerald-500 bg-[#111] px-1 rounded border border-emerald-500/20 z-20">
             {leftLabel}
          </span>
@@ -68,7 +68,7 @@ const Branch = ({ leftLabel, rightLabel, leftContent, rightContent }: any) => (
       {/* Right Column (50%) */}
       <div className="w-1/2 flex flex-col items-center relative">
          <div className="absolute top-0 left-0 w-1/2 h-[2px] bg-[#333]" />
-         <div className="h-6 w-[2px] bg-[#333]" />
+         <div className="h-8 w-[2px] bg-[#333]" />
          <span className="mb-2 text-[9px] font-bold text-red-500 bg-[#111] px-1 rounded border border-red-500/20 z-20">
             {rightLabel}
          </span>
@@ -101,14 +101,17 @@ export default function FeaturesHero() {
         {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
-{/* === CARD 1: SCREENING === */}
-          <div className="flex flex-col h-full bg-[#111] rounded-2xl border border-white/10 p-5 shadow-2xl">
-            <h3 className="mb-6 text-base font-bold text-white border-b border-white/10 pb-4 text-center tracking-wide">AUTOMATED SCREENING</h3>
+          {/* === CARD 1: SCREENING === */}
+          <div className="flex flex-col h-full bg-[#111] rounded-2xl border border-white/10 p-6 shadow-2xl">
+            <h3 className="mb-8 text-base font-bold text-white border-b border-white/10 pb-4 text-center tracking-wide">AUTOMATED SCREENING</h3>
             
             <div className="flex flex-col items-center flex-1 w-full">
               <Node variant="neutral">New Application Received</Node>
               <Connector />
-              <Node variant="primary">AI Resume Screening <br/><span className="text-[10px] font-normal opacity-90">Ranks top 20%</span></Node>
+              <Node variant="primary">
+                AI RESUME SCREENING
+                <span className="text-[10px] font-normal opacity-90 block mt-1">Ranks top 20% of candidates</span>
+              </Node>
               <Connector />
               <Node>Auto-send screening questions</Node>
               <Connector />
@@ -121,7 +124,6 @@ export default function FeaturesHero() {
                 rightContent={<Node variant="danger" className="text-[10px]">Send thank you email</Node>}
               />
 
-              {/* FIX: Aligned to Left (YES path), Green, and Connected */}
               <div className="w-full flex">
                  <div className="w-1/2 flex flex-col items-center">
                     <Connector />
@@ -141,13 +143,19 @@ export default function FeaturesHero() {
           </div>
 
           {/* === CARD 2: INTERVIEW === */}
-          <div className="flex flex-col h-full bg-[#111] rounded-2xl border border-white/10 p-5 shadow-2xl">
-            <h3 className="mb-6 text-base font-bold text-white border-b border-white/10 pb-4 text-center tracking-wide">INTERVIEW AUTOMATION</h3>
+          <div className="flex flex-col h-full bg-[#111] rounded-2xl border border-white/10 p-6 shadow-2xl">
+            <h3 className="mb-8 text-base font-bold text-white border-b border-white/10 pb-4 text-center tracking-wide">INTERVIEW AUTOMATION</h3>
             
             <div className="flex flex-col items-center flex-1 w-full">
               <Node variant="neutral">Invite Accepted</Node>
               <Connector />
-              <Node variant="primary">AI Video Interview <br/><span className="text-[10px] font-normal opacity-90">Technical</span></Node>
+              
+              {/* UPDATED: AI Video Interview Node */}
+              <Node variant="primary">
+                AI VIDEO INTERVIEW
+                <span className="text-[10px] font-normal opacity-90 block mt-1">Technical screening with AI assessment</span>
+              </Node>
+              
               <Connector />
               <Node>AI scores responses</Node>
               <Connector />
@@ -160,7 +168,6 @@ export default function FeaturesHero() {
                 rightContent={<Node variant="danger" className="text-[10px]">Auto-rejection email</Node>}
               />
                
-               {/* FIX: Nested Logic constrained to LEFT side (50%) */}
                <div className="w-full flex">
                   {/* Left Column (Active Path) */}
                   <div className="w-1/2 flex flex-col items-center">
@@ -169,8 +176,8 @@ export default function FeaturesHero() {
                       <Connector />
                       <Diamond label="HIRE?" />
                       
-                      {/* Mini Branch inside Left Column */}
-                      <div className="w-full flex relative mt-0">
+                      {/* Mini Branch */}
+                      <div className="w-full flex relative mt-2">
                           <div className="w-1/2 flex flex-col items-center relative">
                               <div className="absolute top-0 right-0 w-1/2 h-[2px] bg-[#333]" />
                               <div className="h-4 w-[2px] bg-[#333]" />
@@ -185,8 +192,6 @@ export default function FeaturesHero() {
                           </div>
                       </div>
                   </div>
-                  
-                  {/* Right Column (Empty to keep alignment correct) */}
                   <div className="w-1/2" />
                </div>
             </div>
@@ -201,13 +206,19 @@ export default function FeaturesHero() {
           </div>
 
           {/* === CARD 3: NURTURING === */}
-          <div className="flex flex-col h-full bg-[#111] rounded-2xl border border-white/10 p-5 shadow-2xl">
-            <h3 className="mb-6 text-base font-bold text-white border-b border-white/10 pb-4 text-center tracking-wide">CANDIDATE NURTURING</h3>
+          <div className="flex flex-col h-full bg-[#111] rounded-2xl border border-white/10 p-6 shadow-2xl">
+            <h3 className="mb-8 text-base font-bold text-white border-b border-white/10 pb-4 text-center tracking-wide">CANDIDATE NURTURING</h3>
             
             <div className="flex flex-col items-center flex-1 w-full">
               <Node variant="neutral">Rejected (60-74%)</Node>
               <Connector />
-              <Node variant="primary">Add to 'Future Talent' DB</Node>
+              
+              {/* UPDATED: Future Talent DB Node */}
+              <Node variant="primary">
+                FUTURE TALENT DB
+                <span className="text-[10px] font-normal opacity-90 block mt-1">for long-term nurturing</span>
+              </Node>
+              
               <Connector />
               <Node>Wait 3 Months</Node>
               <Connector />
@@ -220,15 +231,14 @@ export default function FeaturesHero() {
                 rightContent={<Node variant="neutral" className="text-[10px]">Check next quarter</Node>}
               />
               
-              {/* FIX: Nested Logic constrained to LEFT side (50%) */}
               <div className="w-full flex">
                   {/* Left Column (Active Path) */}
                   <div className="w-1/2 flex flex-col items-center">
                       <Connector />
                       <Diamond label="INTEREST?" />
                       
-                      {/* Mini Branch inside Left Column */}
-                      <div className="w-full flex relative mt-0">
+                      {/* Mini Branch */}
+                      <div className="w-full flex relative mt-2">
                           <div className="w-1/2 flex flex-col items-center relative">
                               <div className="absolute top-0 right-0 w-1/2 h-[2px] bg-[#333]" />
                               <div className="h-4 w-[2px] bg-[#333]" />
@@ -243,8 +253,6 @@ export default function FeaturesHero() {
                           </div>
                       </div>
                   </div>
-
-                  {/* Right Column (Empty) */}
                   <div className="w-1/2" />
               </div>
             </div>
