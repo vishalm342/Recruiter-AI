@@ -1,12 +1,11 @@
 # RecruiterAI - AI-Powered Hiring Automation
 
-![RecruiterAI Hero](public/hero-preview.png)
 
 [cite_start]This is a conversion-focused landing page built for the **OneSol AI Labs Founder Intern Assessment** [cite: 1-3]. It demonstrates a modern, high-performance SaaS interface for an AI recruiting platform.
 
 ## 🚀 Live Demo
 
-**[View Live Deployment Here](YOUR_VERCEL_LINK_HERE)**
+**[View Live Deployment Here](https://recruiter-ai-theta.vercel.app/)**
 
 ## 🛠️ Tech Stack
 
@@ -19,11 +18,11 @@
 
 ## ✨ Key Features
 
-* [cite_start]**Responsive Hero Section:** Features floating testimonials with complex positioning and backdrop blurs [cite: 34-35].
-* [cite_start]**Interactive Flowcharts:** visualizations of AI screening, interviewing, and nurturing workflows using CSS grid and Flexbox layouts [cite: 82, 104-135].
-* [cite_start]**Animated Metrics:** High-impact stat cards with gradient borders and hover effects [cite: 141-154].
-* [cite_start]**Infinite Logo Slider:** A seamless, auto-scrolling integration marquee [cite: 179-189].
-* [cite_start]**Dark Mode UI:** A "Linear-style" professional dark theme using specific hex codes (`#000000`, `#404040`, `#3B82F6`) as per brand guidelines [cite: 17-32].
+* **Responsive Hero Section:** Features floating testimonials with complex positioning and backdrop blurs.
+* **Interactive Flowcharts:** visualizations of AI screening, interviewing, and nurturing workflows using CSS grid and Flexbox layouts.
+* **Animated Metrics:** High-impact stat cards with gradient borders and hover effects.
+* **Infinite Logo Slider:** A seamless, auto-scrolling integration marquee.
+* **Dark Mode UI:** A "Linear-style" professional dark theme using specific hex codes (`#000000`, `#404040`, `#3B82F6`) as per brand guidelines.
 
 ## 🏃‍♂️ Getting Started
 
@@ -49,8 +48,8 @@
 
 ## 🎨 Design Reference
 
-* [cite_start]**Figma File:** [Link to your Figma Design if you have one] [cite: 215]
-* [cite_start]**Assessment Context:** Designed based on the OneSol AI Labs prompt to solve recruiting pain points through AI automation[cite: 7].
+* **Figma File:** [https://www.figma.com/design/pVQSWa6hUmLCQkqkuBAFOs/Recruiter-AI?node-id=0-1&t=LgCz7u94veaM0K2N-1]
+* **Assessment Context:** Designed based on the OneSol AI Labs prompt to solve recruiting pain points through AI automation.
 
 ## 📂 Project Structure
 
