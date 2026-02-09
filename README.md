@@ -1,7 +1,7 @@
 # RecruiterAI - AI-Powered Hiring Automation
 
 
-[cite_start]This is a conversion-focused landing page built for the **OneSol AI Labs Founder Intern Assessment** [cite: 1-3]. It demonstrates a modern, high-performance SaaS interface for an AI recruiting platform.
+This is a conversion-focused landing page built for the **OneSol AI Labs Founder Intern Assessment**. It demonstrates a modern, high-performance SaaS interface for an AI recruiting platform.
 
 ## 🚀 Live Demo
 
